@@ -1,0 +1,113 @@
+*{
+    font-family: 'Delius';
+    color: #000;
+}
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+.social-media i {
+  margin:10px;
+}
+  main {
+    flex: 1 0 auto;
+  }
+
+i{
+  margin : 4px;
+}
+.page-footer {
+    padding-top: 20px;
+    background-color: #750080;
+}
+.slider{
+    height: 600px !important;
+}
+.slide .slides li img {
+    background-size: cover !important;
+    height: 600px !important;
+    width: 600px !important;
+}
+.indicators {
+  display: none !important;
+}
+.card.small {
+    height: 200px;
+}
+
+.error {
+    color: red;
+
+}
+
+nav {
+    color: #fff;
+    background-color: #750080;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+}
+.side-nav {
+    background:  #750080;
+    color: white !important;
+}
+main, .row {
+  /*background-color:#2a00ff;
+  */
+}
+
+.bordered{
+    border: 4px solid white;
+}
+
+
+
+.btn, .btn-floating {
+  background-color: #750080 !important;
+}
+
+.btn:focus {
+  background-color: #2a00ff !important;
+}
+
+a {
+  color: #4a148c;
+}
+.card {
+    color: #000;
+}
+.help-block{
+    color: red;
+}
+
+.side-nav li > a {
+    color: rgba(255, 255, 255, 1);
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 32px;
+}
+
+.modal-content h4 {
+  /*background: #750080;*/
+  padding: 5px;
+  color: black;
+  text-align: center;
+}
+
+.badge {
+    background: blue;
+}
+
+.tabs .tab a:hover{
+    background-color: rgba(1, 46, 255, 0);
+    border-bottom: 1px blue solid;
+}
+
+.tabs .tab a.active {
+    background-color: rgba(1, 46, 255, 0);
+    border-bottom: 1px blue solid;
+}
