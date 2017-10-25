@@ -1,5 +1,4 @@
-@extends('admin_template')
-
+@extends(Auth::check() ? 'admin_template' : 'master')
 @section('content')
 <div class="row" style="margin-top: 10px;">
 	@if (Auth::check() and Auth::user()->user_type == 'admin')

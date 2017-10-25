@@ -12,7 +12,7 @@
 
             <div class="userView center">
                 <a href="#!user" class="center">
-                    @if($user->user_type == 'employee')
+                    @if($user->user_type == 'employee' and !empty($user->userInfo->id))
                     {{ Html::image(asset(Auth::user()->userInfo->profile_image),
                     null, ['class'=>'circle responsive-img',
                     'style'=>'width:150px; text-align:center'])
@@ -34,15 +34,15 @@
             <a class="btn-flat">
                  <i class="fa fa-pencil"></i>
             </a>
-            @if($user->completed_profile)
+            @if(empty($user->userInfo) and $user->user_type=='employee')
             <a class="btn-flat" href="#complete_profile">
                 Complete Profile
             </a>
             @endif
-           
+            
         </div>
         <div class="col m6 s12">
-            @if($user->user_type == 'employee')
+            @if($user->user_type == 'employee' and !empty($user->userInfo->id))
         <h5 class="center">
             More Information
         </h5>

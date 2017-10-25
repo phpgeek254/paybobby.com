@@ -349,6 +349,7 @@ class ComposerStaticInitee02fd271106856e51b0621307305cfc
     public static $classMap = array (
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\EmployeeOrders' => __DIR__ . '/../..' . '/app/EmployeeOrders.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Faq' => __DIR__ . '/../..' . '/app/Faq.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -363,6 +364,7 @@ class ComposerStaticInitee02fd271106856e51b0621307305cfc
         'App\\Http\\Controllers\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrderController.php',
         'App\\Http\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/Http/Controllers/PagesController.php',
         'App\\Http\\Controllers\\PaymentController' => __DIR__ . '/../..' . '/app/Http/Controllers/PaymentController.php',
+        'App\\Http\\Controllers\\PaypalController' => __DIR__ . '/../..' . '/app/Http/Controllers/PaypalController.php',
         'App\\Http\\Controllers\\UserInfoController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserInfoController.php',
         'App\\Http\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/UsersController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -400,6 +402,7 @@ class ComposerStaticInitee02fd271106856e51b0621307305cfc
         'Commercie\\Currency\\Usage' => __DIR__ . '/..' . '/commercie/currency/src/Usage.php',
         'Commercie\\Currency\\UsageInterface' => __DIR__ . '/..' . '/commercie/currency/src/UsageInterface.php',
         'CreateCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2017_10_08_041714_create_categories_table.php',
+        'CreateEmployeeOrdersTable' => __DIR__ . '/../..' . '/database/migrations/2017_10_25_072605_create_employee_orders_table.php',
         'CreateFaqsTable' => __DIR__ . '/../..' . '/database/migrations/2017_10_07_151354_create_faqs_table.php',
         'CreateJobsTable' => __DIR__ . '/../..' . '/database/migrations/2017_10_08_040239_create_jobs_table.php',
         'CreateOrdersTable' => __DIR__ . '/../..' . '/database/migrations/2017_10_08_055634_create_orders_table.php',

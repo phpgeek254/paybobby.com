@@ -19,7 +19,8 @@ class CreateOrdersTable extends Migration
             $table->integer('category_id');
             $table->integer('employee_id')->nullable();
             $table->dateTime('expiry_date');
-            $table->string('status');
+            $table->string('status')->nullable();
+            $table->string('payment_status')->nullable();
             $table->float('cost', 8, 2);
             $table->text('instructions');
             $table->string('file')->nullable();

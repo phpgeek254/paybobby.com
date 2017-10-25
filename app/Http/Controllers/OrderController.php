@@ -6,6 +6,7 @@ use App\Order;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Session;
 
 /**
  * @property  destination
@@ -29,7 +30,7 @@ class OrderController extends Controller
        } else {
            $orders = Order::where('employee_id', Auth::id())->paginate(10);
        }
-
+//return $orders->toArray();
        return view('orders.order-list', compact('orders'));
     }
 
@@ -59,7 +60,8 @@ class OrderController extends Controller
         }
 
         $order->save();
-        return redirect()->back()->withMessage('Order placed successfully');
+        Session::put('order_id', $order->id);
+        return redirect(route('pay_with_paypal'));
     }
 
     /**

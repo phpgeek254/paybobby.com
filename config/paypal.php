@@ -21,10 +21,10 @@ return array(
          *
          * Available options are 'sandbox' or 'live'
          */
-        'mode' => env('PAYPAL_MODE', 'sandbox'),
+        'mode' => 'live',
         
         // Specify the max connection attempt (3000 = 3 seconds)
-        'http.ConnectionTimeOut' => 3000,
+        'http.ConnectionTimeOut' => 31001 ,
        
         // Specify whether or not we want to store logs
         'log.LogEnabled' => true,

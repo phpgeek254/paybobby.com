@@ -1,9 +1,9 @@
 @if(Auth::check() and Auth::user()->user_type=='employee')
     <li>{{ link_to('profile', 'Profile') }}</li>
     <li>{{ link_to('available-jobs', 'Available Jobs') }}</li>
-    <li>{{ link_to_route('register', 'Your Orders') }}</li>
-    <li>{{ link_to_route('login', 'Account') }}</li>
-    <li>{{ link_to('working', 'Ratings') }}</li>
+    <li>{{ link_to('orders', 'Your Orders') }}</li>
+    {{--<li>{{ link_to_route('login', 'Account') }}</li>--}}
+    {{--<li>{{ link_to('working', 'Ratings') }}</li>--}}
     <li>
         <a href="{{ route('logout') }}"
            onclick="event.preventDefault();
@@ -20,8 +20,8 @@
 @if(Auth::check() and Auth::user()->user_type=='employer')
     <li>{{ link_to('profile', 'Profile') }}</li>
     <li>{{ link_to('orders', 'Your Orders') }}</li>
-    <li>{{ link_to('payments', 'Payment Methods') }}</li>
-    <li>{{ link_to('complains', 'Complains') }}</li>
+    {{--<li>{{ link_to('payments', 'Payment Methods') }}</li>--}}
+    {{--<li>{{ link_to('complains', 'Complains') }}</li>--}}
     <li>
         <a href="{{ route('logout') }}" 
            onclick="event.preventDefault();

@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Category' => $baseDir . '/app/Category.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\EmployeeOrders' => $baseDir . '/app/EmployeeOrders.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Faq' => $baseDir . '/app/Faq.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -22,6 +23,7 @@ return array(
     'App\\Http\\Controllers\\OrderController' => $baseDir . '/app/Http/Controllers/OrderController.php',
     'App\\Http\\Controllers\\PagesController' => $baseDir . '/app/Http/Controllers/PagesController.php',
     'App\\Http\\Controllers\\PaymentController' => $baseDir . '/app/Http/Controllers/PaymentController.php',
+    'App\\Http\\Controllers\\PaypalController' => $baseDir . '/app/Http/Controllers/PaypalController.php',
     'App\\Http\\Controllers\\UserInfoController' => $baseDir . '/app/Http/Controllers/UserInfoController.php',
     'App\\Http\\Controllers\\UsersController' => $baseDir . '/app/Http/Controllers/UsersController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
@@ -59,6 +61,7 @@ return array(
     'Commercie\\Currency\\Usage' => $vendorDir . '/commercie/currency/src/Usage.php',
     'Commercie\\Currency\\UsageInterface' => $vendorDir . '/commercie/currency/src/UsageInterface.php',
     'CreateCategoriesTable' => $baseDir . '/database/migrations/2017_10_08_041714_create_categories_table.php',
+    'CreateEmployeeOrdersTable' => $baseDir . '/database/migrations/2017_10_25_072605_create_employee_orders_table.php',
     'CreateFaqsTable' => $baseDir . '/database/migrations/2017_10_07_151354_create_faqs_table.php',
     'CreateJobsTable' => $baseDir . '/database/migrations/2017_10_08_040239_create_jobs_table.php',
     'CreateOrdersTable' => $baseDir . '/database/migrations/2017_10_08_055634_create_orders_table.php',

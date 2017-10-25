@@ -70,16 +70,35 @@ class UserInfoController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\UserInfo  $userInfo
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, UserInfo $userInfo)
+    
+    public function update(Request $request, $userInfo)
     {
-        //
+        $user_info = UserInfo::findOrFail($userInfo);
+        $this->validate($request, []);
+
+        if ($request->hasFile('profile_image'))
+        {
+            $file = $request->file('profile_image');
+            $file_name = uniqid().$file->getClientOriginalName();
+
+            $image_path = $this->destination.$file_name;
+            $file->move($this->destination, $file_name);
+        } else {
+            $image_path = $user_info->profile_image;
+        }
+
+        $user_info->update([
+           'user_id'=>$request->user_id,
+           'bio'=>$request->bio,
+           'phone_number'=>$request->phone_number,
+           'profile_image'=>$image_path,
+           'graduated_from'=>$request->graduated_from,
+           'country'=>$request->country,
+           'profession'=>$request->profession,
+           'skills'=>$request->skills
+        ]);
+//        dd($user);
+        return redirect()->back()->withMessage('Data updated Successfully');
     }
 
     /**
@@ -88,8 +107,10 @@ class UserInfoController extends Controller
      * @param  \App\UserInfo  $userInfo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(UserInfo $userInfo)
+    public function destroy($userInfo)
     {
-        //
+        $user = UserInfo::findOrFail($userInfo);
+        $user->delete();
+        return redirect()->back()->withMessage('Details Deleted');
     }
 }

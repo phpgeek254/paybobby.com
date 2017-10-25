@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Malewa West Water Project') }}</title>
+    <title>{{ config('app.name', '') }}</title>
 
     @include('partials.stylesheets')
     @include('partials.javascripts')
@@ -23,7 +23,7 @@
                         <img src="/images/sample1.jpg" class="responsive-img">
                     </div>
                     <a href="#!user">
-                    @if(Auth::check() and Auth::user()->user_type == 'employee')
+                    @if(Auth::check() and Auth::user()->user_type == 'employee' and !empty($user->userInfo->id))
                     {{
                         Html::image(asset(Auth::user()->userInfo->profile_image),
                          null, ['class'=>'circle'])
@@ -37,18 +37,24 @@
                     </a>
                     <a href="#!name">
                         <span class="white-text name">
-                        {{ Auth::user()->name }}
+                        @if (Auth::check())
+                                 {{ Auth::user()->name }}
                             -
                         {{
                             strtoupper(Auth::user()->user_type=='employer'? 'Client' : 'Free-Lancer')
                         }}
+                            @endif
+                       
                         </span>
                     </a>
                     <a href="#!email">
-                        <span class="white-text email">
+                    @if (Auth::check())
+                         <span class="white-text email">
                             {{ Auth::user()->email }}
 
                         </span>
+                    @endif
+                        
                     </a>
                 </div>
             </li>
@@ -76,6 +82,7 @@
         <div class="message" style="display: none">
             {{ Session::get('message') }}
         </div>
+        @php Session::forget('message'); @endphp
     @endif
 
     @yield('content')

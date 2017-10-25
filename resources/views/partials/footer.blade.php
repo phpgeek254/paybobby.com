@@ -5,23 +5,20 @@
 					<div class="col m6 s12">
 						<h5 class="center white-text"> Follow Us </h5>
 				<div class="center social-media">
-				<i class="fa fa-twitter white-text fa-2x"></i>
-				<i class="fa fa-facebook white-text fa-2x"></i>
-				<i class="fa fa-google white-text fa-2x"></i>
-				<i class="fa fa-youtube white-text fa-2x"></i>
-				<i class="fa fa-instagram white-text fa-2x"></i>
-				<i class="fa fa-linkedin white-text fa-2x"></i>
+					<a href="https://twitter.com/paybobby"><i class="fa fa-twitter white-text fa-2x"></i></a>
+					<a href="https://web.facebook.com/Paybobby-1852118945112377/"><i class="fa fa-facebook white-text fa-2x"></i></a>
+					<a href="https://plus.google.com/u/2/"><i class="fa fa-google white-text fa-2x"></i></a>
+					<a href=""><i class="fa fa-youtube white-text fa-2x"></i></a>
+					<a href="https://www.instagram.com/paybobby/"><i class="fa fa-instagram white-text fa-2x"></i></a>
+				<a href="www.linkedin.com/company/27008635/"><i class="fa fa-linkedin white-text fa-2x"></i></a>
 				</div>
 					</div>
 
 					<div class="col m6 s12 center">
 						<h5 class="center white-text"> Company Info. </h5>
-						<a href="" class="white-text"> About Us </a><br>
-						<a href="" class="white-text"> Contact Us </a><br>
-						{{-- <a href="" class="white-text"> About Us</a><br>
-						<a href="" class="white-text"> About Us</a><br>
-						<a href="" class="white-text"> About Us</a><br>
-						 --}}
+						<a href="/about" class="white-text"> About Us </a><br>
+						<a href="/contact" class="white-text"> Contact Us </a><br>
+
 					</div>
 				
 				</div>
@@ -44,7 +41,8 @@
 						<div class="row">
 							@foreach ($chunk as $category)
 								<div class="col m4 s12">
-							<li><a class="grey-text text-lighten-3" href="#!">
+							<li>
+								<a href='/available-jobs/{{ $category->id }}' class="grey-text text-lighten-3" href="#!">
 							{{ $category->name }}
 						</a>
 						</li>

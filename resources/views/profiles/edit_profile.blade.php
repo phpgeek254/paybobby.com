@@ -1,4 +1,5 @@
-<div id="edit_info_{{ $user->userInfo->id }}" class="modal animated slideInDown">
+@if (!empty($user->userInfo->id))
+   <div id="edit_info_{{ $user->userInfo->id }}" class="modal animated slideInDown">
     <div class="modal-content">
         <h4> Complete Profile  </h4>
         {!! Form::model($user->userInfo, ['route'=>['profiles.update', $user->userInfo->id], 'files'=>true, 'method'=>'PATCH']) !!}
@@ -11,3 +12,4 @@
         {!! Form::close() !!}
     </div>
 </div>
+@endif

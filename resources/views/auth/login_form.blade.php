@@ -7,7 +7,6 @@
 		<span class="error animated fadeInDown"> {{ $errors->first('email') }}</span>
 	@endif
 </div>
-
 {{-- Password Field --}}
 <div class="input-field col s12">
 	{!! Form::password('password', null) !!}

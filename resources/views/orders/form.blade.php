@@ -43,20 +43,20 @@
 
 <div class="input-field col s12">
     {!! Form::number('cost', null, ['placeholder'=>'Enter amount in dollars', 'step'=>'0.01']) !!}
-    {!! Form::label('cost', 'Payment') !!}
+    {!! Form::label('cost', 'Amount') !!}
 
     @if ($errors)
         <span class="error">{{ $errors->first('cost') }}</span>
     @endif
 </div>
-<div class="file-field input-field">
-    <div class="btn">
-        <span class="white-text">Upload Attachment if any</span>
-        {!! Form::file('file') !!}
-    </div>
-    <div class="file-path-wrapper">
-        <input class="file-path validate" type="text"
-               placeholder="Upload File (Formats, DOCX, PDF">
-    </div>
-</div>
+{{--<div class="file-field input-field">--}}
+    {{--<div class="btn">--}}
+        {{--<span class="white-text">Upload Attachment if any</span>--}}
+        {{--{!! //Form::file('file') !!}--}}
+    {{--</div>--}}
+    {{--<div class="file-path-wrapper">--}}
+        {{--<input class="file-path validate" type="text"--}}
+               {{--placeholder="Upload File (Formats, DOCX, PDF">--}}
+    {{--</div>--}}
+{{--</div>--}}
 
